@@ -77,7 +77,7 @@ if user_query:
 
     history_text = "\n".join([f"{m['role']}: {m['content']}" for m in st.session_state.messages[-5:-1]])
 
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-lite")
     
     initial_prompt = f"System: Provide a detailed, comprehensive, and well-structured answer strictly using the provided context. If the answer is not in the context, output exactly and only the word 'SEARCH_WEB'.\n\nChat History:\n{history_text}\n\nContext: {context}\n\nQuestion: {user_query}"
     
